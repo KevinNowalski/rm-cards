@@ -1,0 +1,146 @@
+$font-stack: Georgia, sans-serif;
+$primary-color: #000;
+
+*{
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font: 16px $font-stack;
+  color: $primary-color;
+}
+
+h1 {
+  text-transform: capitalize;
+}
+
+h2 {
+  text-transform: capitalize;
+}
+
+button {
+  padding: 10px 20px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background:#fff;
+  border: 1px solid #000;
+  padding: 10px;
+  display: flex;
+  z-index: 100;
+}
+
+header ~ h1 {
+  margin: 155px 0 20px;
+  text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 890px;
+  max-width: 100%;
+}
+
+#logo img {
+  width: 200px;
+}
+
+#filter {
+  margin-bottom: 30px;
+}
+
+#filter .container {
+  width: 876px;
+}
+
+#filter label {
+  font-family:'Helvetica',sans-serif;
+  font-weight: 700;
+}
+
+#filter input {
+  height: 28px;
+  width: 200px;
+  border-radius: 4px;
+  border: 1px solid #000;
+  padding:0 7px;
+  margin-left: 10px;
+}
+
+#cards {
+  padding: 0 0 100px;
+}
+
+.card>div{
+  border-radius: 20px;
+  border: 1px solid #000;
+  width: 200px;
+  padding: 10px;
+  margin: 0 auto 30px;
+}
+
+.card img {
+  object-fit: cover;  
+  margin: 0 auto;
+  width: 100%;
+}
+
+.name-delete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:10px 0;
+  height: 85px;
+}
+
+.name-delete h2 {
+  font-size: 16px;
+  margin: 0 5px 0 0;
+}
+
+.slick-slide>div {
+  display: flex;
+}
+
+.slick-prev {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: -100px;
+  width: 120px;
+  margin-top: 30px;
+}
+
+.slick-next {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: 100px;
+  width: 120px;
+  margin-top: 30px;
+}
+
+@media only screen and (max-width: 991px) {
+  header {
+    justify-content: center;
+  }
+  .slick-prev{
+    margin-left: -85px;
+  }
+  .slick-next{
+    margin-left: 85px;
+  }
+}
